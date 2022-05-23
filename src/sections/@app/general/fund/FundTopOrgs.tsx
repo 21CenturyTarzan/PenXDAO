@@ -24,7 +24,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 type ItemProps = {
   id: string;
-  name: string;
+  orgName: string;
   avatar: string;
   favourite: number;
 };
@@ -52,7 +52,7 @@ export default function FundTopOrgs({ title, subheader, list, ...other }: Props)
 // ----------------------------------------------------------------------
 
 type OrgItemProps = {
-  org: OrgProps;
+  org: ItemProps;
   index: number;
 };
 

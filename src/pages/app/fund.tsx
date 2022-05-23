@@ -94,7 +94,7 @@ export default function GeneralFund() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4} height='100%'>
+          <Grid item xs={12} md={6} lg={4}>
             <FundCurrentDownload
               title="Fund Allocation (USD)"
               chartColors={[
