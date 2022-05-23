@@ -92,7 +92,7 @@ export default function BlogPosts() {
           heading="Blog"
           links={[
             { name: 'Dashboard', href: PATH_APP.root },
-            { name: 'Blog', href: PATH_APP.blog.root },
+            { name: 'Blog', href: PATH_APP.root },
             { name: 'Posts' },
           ]}
           action={

@@ -29,8 +29,8 @@ export default function BlogNewPost() {
         <HeaderBreadcrumbs
           heading="Create a new post"
           links={[
-            { name: 'Dashboard', href: PATH_APP.root },
-            { name: 'Blog', href: PATH_APP.blog.root },
+            { name: 'Dashboard', href: PATH_APP.general.penx },
+            { name: 'Blog', href: PATH_APP.general.penx },
             { name: 'New Post' },
           ]}
         />

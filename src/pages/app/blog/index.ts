@@ -10,8 +10,8 @@ export default function Index() {
   const { pathname, push } = useRouter();
 
   useEffect(() => {
-    if (pathname === PATH_APP.blog.root) {
-      push(PATH_APP.blog.posts);
+    if (pathname === PATH_APP.general.penx) {
+      push(PATH_APP.general.penx);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
