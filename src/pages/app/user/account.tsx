@@ -61,7 +61,7 @@ export default function UserAccount() {
     {
       value: 'social_links',
       icon: <Iconify icon={'eva:share-fill'} width={20} height={20} />,
-      component: <AccountSocialLinks myProfile={_userAbout} />,
+      component: <AccountSocialLinks />,
     },
     {
       value: 'change_password',
