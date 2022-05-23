@@ -18,8 +18,7 @@ import { FormProvider, RHFTextField } from '../../../components/hook-form';
 type FormValuesProps = {
   email: string;
   password: string;
-  firstName: string;
-  lastName: string;
+  orgName: string;
   afterSubmit?: string;
 };
 
@@ -31,15 +30,13 @@ export default function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   const RegisterSchema = Yup.object().shape({
-    firstName: Yup.string().required('First name required'),
-    lastName: Yup.string().required('Last name required'),
+    orgName: Yup.string().required('Organisation name required'),
     email: Yup.string().email('Email must be a valid email address').required('Email is required'),
     password: Yup.string().required('Password is required'),
   });
 
   const defaultValues = {
-    firstName: '',
-    lastName: '',
+    orgName: '',
     email: '',
     password: '',
   };
@@ -59,7 +56,7 @@ export default function RegisterForm() {
 
   const onSubmit = async (data: FormValuesProps) => {
     try {
-      await register(data.email, data.password, data.firstName, data.lastName);
+      await register(data.email, data.password, data.orgName);
     } catch (error) {
       console.error(error);
 
@@ -77,8 +74,7 @@ export default function RegisterForm() {
         {!!errors.afterSubmit && <Alert severity="error">{errors.afterSubmit.message}</Alert>}
 
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-          <RHFTextField name="firstName" label="First name" />
-          <RHFTextField name="lastName" label="Last name" />
+          <RHFTextField name="orgName" label="Organisation name" />
         </Stack>
 
         <RHFTextField name="email" label="Email address" />
@@ -105,7 +101,7 @@ export default function RegisterForm() {
           variant="contained"
           loading={isSubmitting}
         >
-          Register
+          Get Started
         </LoadingButton>
       </Stack>
     </FormProvider>

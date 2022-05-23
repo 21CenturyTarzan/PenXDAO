@@ -133,4 +133,5 @@ export const _workerList = [...Array(24)].map((_, index) => ({
   isVerified: _mock.boolean(index),
   status: randomInArray(['active', 'inactive']),
   role: _mock.role(index),
+  unlockDate: 'Q'+randomNumberRange(1, 4)+' '+randomNumberRange(2029, 2053),
 }));

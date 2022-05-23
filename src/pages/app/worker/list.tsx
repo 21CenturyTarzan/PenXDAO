@@ -67,6 +67,7 @@ const DEPARTMENT_OPTIONS = [
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', align: 'left' },
   { id: 'department', label: 'Department', align: 'left' },
+  { id: 'unlockDate', label: 'Retirement Date', align: 'left' },
   { id: 'isVerified', label: 'Verified', align: 'center' },
   { id: 'status', label: 'Status', align: 'left' },
   { id: '' },

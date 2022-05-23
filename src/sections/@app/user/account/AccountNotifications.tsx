@@ -12,19 +12,19 @@ import { FormProvider, RHFSwitch } from '../../../../components/hook-form';
 const ACTIVITY_OPTIONS = [
   {
     value: 'activityComments',
-    label: 'Email me when someone comments onmy article',
+    label: 'Email me when it is time to create a new contribution schedule.',
   },
   {
     value: 'activityAnswers',
-    label: 'Email me when someone answers on my form',
+    label: 'Email me when a payment is due.',
   },
-  { value: 'activityFollows', label: 'Email me hen someone follows me' },
+  { value: 'activityFollows', label: 'Email my workers when a contribution schedule is paid.' },
 ] as const;
 
 const APPLICATION_OPTIONS = [
-  { value: 'applicationNews', label: 'News and announcements' },
-  { value: 'applicationProduct', label: 'Weekly product updates' },
-  { value: 'applicationBlog', label: 'Weekly blog digest' },
+  { value: 'applicationNews', label: 'Pen-X News and announcements.' },
+  { value: 'applicationProduct', label: 'Quarterly fund performation digest.' },
+  { value: 'applicationBlog', label: 'Monthly fund performation digest.' },
 ] as const;
 
 const NOTIFICATION_SETTINGS = {

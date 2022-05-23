@@ -89,7 +89,7 @@ export default function Register() {
           {mdUp && (
             <SectionStyle>
               <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-                Manage the job more effectively with Minimal
+                Revolutionising pension for Web3
               </Typography>
               <Image
                 visibleByDefault
@@ -105,10 +105,11 @@ export default function Register() {
               <Box sx={{ mb: 5, display: 'flex', alignItems: 'center' }}>
                 <Box sx={{ flexGrow: 1 }}>
                   <Typography variant="h4" gutterBottom>
-                    Get started absolutely free.
+                    Offer a pension to your workers absolutely free.
                   </Typography>
                   <Typography sx={{ color: 'text.secondary' }}>
-                    Free forever. No credit card needed.
+                    Visit our <Link underline="always" color="text.primary" href="htps://link.penxdao.com/discord">
+                      Discord</Link> for more help.
                   </Typography>
                 </Box>
                 <Tooltip title={capitalCase(method)}>
@@ -126,11 +127,11 @@ export default function Register() {
               <RegisterForm />
 
               <Typography variant="body2" align="center" sx={{ color: 'text.secondary', mt: 3 }}>
-                By registering, I agree to Minimal&nbsp;
+                By registering, I agree to the Pen-X&nbsp;
                 <Link underline="always" color="text.primary" href="#">
                   Terms of Service
                 </Link>
-                {''}and{''}
+                {''} and {''}
                 <Link underline="always" color="text.primary" href="#">
                   Privacy Policy
                 </Link>

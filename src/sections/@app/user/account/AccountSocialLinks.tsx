@@ -1,14 +1,18 @@
+import * as Yup from 'yup';
 import { useSnackbar } from 'notistack';
 // form
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 // @mui
 import { Stack, Card, InputAdornment } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 // @types
-import { Profile } from '../../../../@types/user';
+import { SocialLinks } from '../../../../@types/user';
 // components
 import Iconify from '../../../../components/Iconify';
 import { FormProvider, RHFTextField } from '../../../../components/hook-form';
+// hooks
+import useAuth from '../../../../hooks/useAuth';
 
 // ----------------------------------------------------------------------
 
@@ -41,24 +45,31 @@ type FormValuesProps = {
 };
 
 type Props = {
-  myProfile: Profile;
+  user: SocialLinks;
 };
 
-export default function AccountSocialLinks({ myProfile }: Props) {
+export default function AccountSocialLinks() {
   const { enqueueSnackbar } = useSnackbar();
 
+  const { user } = useAuth();
+
+  const UpdateUserSchema = Yup.object().shape({
+  });
+
   const defaultValues = {
-    facebookLink: myProfile.facebookLink,
-    instagramLink: myProfile.instagramLink,
-    linkedinLink: myProfile.linkedinLink,
-    twitterLink: myProfile.twitterLink,
+    facebookLink: user?.facebookLink || '',
+    instagramLink: user?.instagramLink || '',
+    linkedinLink: user?.linkedinLink || '',
+    twitterLink: user?.twitterLink || '',
   };
 
-  const methods = useForm({
+  const methods = useForm<FormValuesProps>({
+    resolver: yupResolver(UpdateUserSchema),
     defaultValues,
   });
 
   const {
+    setValue,
     handleSubmit,
     formState: { isSubmitting },
   } = methods;

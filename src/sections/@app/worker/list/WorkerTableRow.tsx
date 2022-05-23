@@ -28,7 +28,7 @@ export default function WorkerTableRow({
 }: Props) {
   const theme = useTheme();
 
-  const { name, avatarUrl, department, isVerified, status } = row;
+  const { name, avatarUrl, department, unlockDate, isVerified, status } = row;
 
   const [openMenu, setOpenMenuActions] = useState<HTMLElement | null>(null);
 
@@ -54,6 +54,8 @@ export default function WorkerTableRow({
       </TableCell>
 
       <TableCell align="left">{department}</TableCell>
+      
+      <TableCell align="left">{unlockDate}</TableCell>
 
       <TableCell align="center">
         <Iconify

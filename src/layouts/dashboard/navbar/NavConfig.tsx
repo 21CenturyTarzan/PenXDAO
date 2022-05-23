@@ -34,8 +34,8 @@ const navConfig = [
   {
     subheader: 'general',
     items: [
-      { title: 'fund', path: PATH_APP.general.fund, icon: ICONS.analytics },
-      { title: 'penx', path: PATH_APP.general.penx, icon: ICONS.ecommerce },
+      { title: 'Pen-X Fund', path: PATH_APP.general.fund, icon: ICONS.analytics },
+      { title: '$PENX', path: PATH_APP.general.penx, icon: ICONS.ecommerce },
       // { title: 'analytics', path: PATH_APP.general.analytics, icon: ICONS.analytics },
       // { title: 'booking', path: PATH_APP.general.booking, icon: ICONS.booking },
     ],
@@ -68,7 +68,7 @@ const navConfig = [
     items: [
       
       { title: 'account', path: PATH_APP.user.account, icon: ICONS.kanban },
-      { title: 'help', path: PATH_APP.user.account, icon: ICONS.chat },
+      { title: 'help', path: 'https://docs.penxdao.com', icon: ICONS.chat },
     ]
     },
 

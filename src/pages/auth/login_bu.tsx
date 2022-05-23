@@ -3,7 +3,7 @@ import { capitalCase } from 'change-case';
 import NextLink from 'next/link';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Card, Stack, Link, Alert, Tooltip, Container, Typography } from '@mui/material';
+import { Button, Box, Card, Stack, Link, Alert, Tooltip, Container, Typography } from '@mui/material';
 // routes
 import { PATH_AUTH } from '../../routes/paths';
 // hooks
@@ -17,9 +17,6 @@ import Logo from '../../components/Logo';
 import Image from '../../components/Image';
 // sections
 import { LoginForm } from '../../sections/auth/login';
-// Firebase Socials
-// import AuthFirebaseSocials from '../../components/authentication/AuthFirebaseSocial';
-
 
 // ----------------------------------------------------------------------
 
@@ -108,7 +105,7 @@ export default function Login() {
               <Stack direction="row" alignItems="center" sx={{ mb: 5 }}>
                 <Box sx={{ flexGrow: 1 }}>
                   <Typography variant="h4" gutterBottom>
-                    Sign in to Pen-X
+                    Sign in to Minimal
                   </Typography>
                   <Typography sx={{ color: 'text.secondary' }}>
                     Enter your details below.
@@ -128,7 +125,7 @@ export default function Login() {
               </Stack>
 
               <Alert severity="info" sx={{ mb: 3 }}>
-                Use email : <strong>demo@penxdao.com</strong> / password :<strong> ilovepension</strong>
+                Use email : <strong>demo@minimals.cc</strong> / password :<strong> demo1234</strong>
               </Alert>
 
               <LoginForm />

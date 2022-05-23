@@ -71,6 +71,7 @@ export type WorkerManager = {
   isVerified: boolean;
   status: string;
   role: string;
+  unlockDate: Date | string | number;
 };
 
 export type WorkerData = {

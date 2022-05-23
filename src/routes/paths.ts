@@ -100,6 +100,9 @@ export const PATH_APP = {
     view: (title: string) => path(ROOTS_APP, `/blog/post/${title}`),
     demoView: path(ROOTS_APP, '/blog/post/apply-these-7-secret-techniques-to-improve-event'),
   },
+  mail: {
+    root: path(ROOTS_APP, '/mail'),
+  },
 };
 
 export const PATH_DOCS = 'https://docs.penxdao.com';

@@ -56,7 +56,7 @@ export default function HomeCleanInterfaces() {
                 }),
               }}
             >
-              Beautiful, modern and clean user interfaces
+              The Web3 Pension Fund
             </Typography>
           </m.div>
         </ContentStyle>

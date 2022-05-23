@@ -15,7 +15,7 @@ import { FIREBASE_API } from '../config';
 
 // ----------------------------------------------------------------------
 
-const ADMIN_EMAILS = ['demo@minimals.cc'];
+const ADMIN_EMAILS = ['dev@penxdao.com'];
 
 const firebaseApp = initializeApp(FIREBASE_API);
 
@@ -98,14 +98,14 @@ function AuthProvider({ children }: AuthProviderProps) {
   const login = (email: string, password: string) =>
     signInWithEmailAndPassword(AUTH, email, password);
 
-  const register = (email: string, password: string, firstName: string, lastName: string) =>
+  const register = (email: string, password: string, orgName: string) =>
     createUserWithEmailAndPassword(AUTH, email, password).then(async (res) => {
       const userRef = doc(collection(DB, 'users'), res.user?.uid);
 
       await setDoc(userRef, {
         uid: res.user?.uid,
         email,
-        displayName: `${firstName} ${lastName}`,
+        orgName: `${orgName}`,
       });
     });
 
@@ -120,20 +120,15 @@ function AuthProvider({ children }: AuthProviderProps) {
           id: state?.user?.uid,
           email: state?.user?.email,
           photoURL: state?.user?.photoURL || profile?.photoURL,
-          displayName: state?.user?.displayName || profile?.displayName,
-          role: ADMIN_EMAILS.includes(state?.user?.email) ? 'admin' : 'user',
-          phoneNumber: state?.user?.phoneNumber || profile?.phoneNumber || '',
-          country: profile?.country || '',
-          address: profile?.address || '',
-          state: profile?.state || '',
-          city: profile?.city || '',
-          zipCode: profile?.zipCode || '',
-          about: profile?.about || '',
-          isPublic: profile?.isPublic || false,
+          orgName: state?.user?.orgName || profile?.orgName,
+          role: ADMIN_EMAILS.includes(state?.user?.email) ? 'admin' : 'Organisation',
+          about: state?.user?.about || '',
+          isPublic: state?.user?.isPublic || false,
+          facebookLink: state?.user?.facebookLink,
         },
         login,
-        register,
         logout,
+        register,
       }}
     >
       {children}

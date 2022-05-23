@@ -12,7 +12,7 @@ import useAuth from '../../../../hooks/useAuth';
 // utils
 import { fData } from '../../../../utils/formatNumber';
 // _mock
-import { countries } from '../../../../_mock';
+// import { countries } from '../../../../_mock';
 // components
 import {
   FormProvider,
@@ -25,15 +25,9 @@ import {
 // ----------------------------------------------------------------------
 
 type FormValuesProps = {
-  displayName: string;
+  orgName: string;
   email: string;
   photoURL: File | any;
-  phoneNumber: string | null;
-  country: string | null;
-  address: string | null;
-  state: string | null;
-  city: string | null;
-  zipCode: string | null;
   about: string | null;
   isPublic: boolean;
 };
@@ -44,19 +38,14 @@ export default function AccountGeneral() {
   const { user } = useAuth();
 
   const UpdateUserSchema = Yup.object().shape({
-    displayName: Yup.string().required('DAO Name is required'),
+    orgName: Yup.string().required('Organisation Name is required'),
+    email: Yup.string().required('Email Address is required'),
   });
 
   const defaultValues = {
-    displayName: user?.displayName || '',
+    orgName: user?.orgName || '',
     email: user?.email || '',
     photoURL: user?.photoURL || '',
-    phoneNumber: user?.phoneNumber || '',
-    country: user?.country || '',
-    address: user?.address || '',
-    state: user?.state || '',
-    city: user?.city || '',
-    zipCode: user?.zipCode || '',
     about: user?.about || '',
     isPublic: user?.isPublic || false,
   };
@@ -143,25 +132,8 @@ export default function AccountGeneral() {
                 gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' },
               }}
             >
-              <RHFTextField name="displayName" label="Name" />
+              <RHFTextField name="orgName" label="Organisation Name" />
               <RHFTextField name="email" label="Email Address" />
-
-              <RHFTextField name="phoneNumber" label="Phone Number" />
-              <RHFTextField name="address" label="Address" />
-
-              <RHFSelect name="country" label="Country" placeholder="Country">
-                <option value="" />
-                {countries.map((option) => (
-                  <option key={option.code} value={option.label}>
-                    {option.label}
-                  </option>
-                ))}
-              </RHFSelect>
-
-              <RHFTextField name="state" label="State/Region" />
-
-              <RHFTextField name="city" label="City" />
-              <RHFTextField name="zipCode" label="Zip/Code" />
             </Box>
 
             <Stack spacing={3} alignItems="flex-end" sx={{ mt: 3 }}>

@@ -84,18 +84,17 @@ export default function HomeHero() {
           <ContentStyle>
             <m.div variants={varFade().inRight}>
               <Typography variant="h1" sx={{ color: 'common.white' }}>
-                Start a <br />
-                new project <br /> with
+                The 
                 <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
-                  &nbsp;Minimal
-                </Typography>
+                  &nbsp;Web3
+                </Typography><br />
+                Pension Fund <br />
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
               <Typography sx={{ color: 'common.white' }}>
-                The starting point for your next project based on easy-to-customize MUI helps you
-                build apps faster and better.
+                Decentralised retirement saving for the next generation of workers.
               </Typography>
             </m.div>
 
@@ -111,13 +110,13 @@ export default function HomeHero() {
                   }
                   value={
                     <Link
-                      href="https://www.sketch.com/s/76388a4d-d6e5-4b7f-8770-e5446bfa1268"
+                      href="https://link.penxdao.com/discord"
                       target="_blank"
                       rel="noopener"
                       color="common.white"
                       sx={{ typography: 'body2' }}
                     >
-                      Preview Sketch
+                      Join Discord
                     </Link>
                   }
                 />
@@ -134,13 +133,13 @@ export default function HomeHero() {
                   }
                   value={
                     <Link
-                      href="https://www.figma.com/file/x7earqGD0VGFjFdk5v2DgZ/%5BPreview%5D-Minimal-Web?node-id=866%3A55474"
+                      href="https://docs.penxdao.com"
                       target="_blank"
                       rel="noopener"
                       color="common.white"
                       sx={{ typography: 'body2' }}
                     >
-                      Preview Figma
+                      Documentation
                     </Link>
                   }
                 />
@@ -154,7 +153,7 @@ export default function HomeHero() {
                   variant="contained"
                   startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
                 >
-                  Live Preview
+                  Launch App
                 </Button>
               </NextLink>
             </m.div>
