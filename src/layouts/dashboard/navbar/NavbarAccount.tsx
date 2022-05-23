@@ -6,7 +6,7 @@ import { Box, Link, Typography } from '@mui/material';
 // hooks
 import useAuth from '../../../hooks/useAuth';
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import { PATH_APP } from '../../../routes/paths';
 // components
 import MyAvatar from '../../../components/MyAvatar';
 
@@ -33,7 +33,7 @@ export default function NavbarAccount({ isCollapse }: Props) {
   const { user } = useAuth();
 
   return (
-    <NextLink href={PATH_DASHBOARD.user.account} passHref>
+    <NextLink href={PATH_APP.user.account} passHref>
       <Link underline="none" color="inherit">
         <RootStyle
           sx={{

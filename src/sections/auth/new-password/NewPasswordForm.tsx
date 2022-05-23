@@ -10,7 +10,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Stack, IconButton, OutlinedInput, InputAdornment, FormHelperText } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import { PATH_APP } from '../../../routes/paths';
 // components
 import Iconify from '../../../components/Iconify';
 import { FormProvider, RHFTextField } from '../../../components/hook-form';
@@ -146,7 +146,7 @@ export default function NewPasswordForm() {
 
       enqueueSnackbar('Change password success!');
 
-      push(PATH_DASHBOARD.root);
+      push(PATH_APP.root);
     } catch (error) {
       console.error(error);
     }

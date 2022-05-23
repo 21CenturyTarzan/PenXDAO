@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import { styled } from '@mui/material/styles';
 import { Button, Box, Link, Container, Typography, Stack, StackProps } from '@mui/material';
 // routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+import { PATH_APP } from '../../routes/paths';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
@@ -148,7 +148,7 @@ export default function HomeHero() {
             </Stack>
 
             <m.div variants={varFade().inRight}>
-              <NextLink href={PATH_DASHBOARD.root} passHref>
+              <NextLink href={PATH_APP.root} passHref>
                 <Button
                   size="large"
                   variant="contained"

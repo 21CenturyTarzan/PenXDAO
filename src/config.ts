@@ -3,7 +3,7 @@ import { enUS, frFR, zhCN, viVN, arSD } from '@mui/material/locale';
 // components
 import { SettingsValueProps } from './components/settings/type';
 // routes
-import { PATH_DASHBOARD } from './routes/paths';
+import { PATH_APP } from './routes/paths';
 
 // API
 // ----------------------------------------------------------------------
@@ -32,7 +32,7 @@ export const AUTH0_API = {
 export const MAPBOX_API = process.env.MAPBOX_API;
 
 // ROOT PATH AFTER LOGIN SUCCESSFUL
-export const PATH_AFTER_LOGIN = PATH_DASHBOARD.general.app; // as '/dashboard/app'
+export const PATH_AFTER_LOGIN = PATH_APP.general.fund; // as '/app/fund'
 
 // LAYOUT
 // ----------------------------------------------------------------------

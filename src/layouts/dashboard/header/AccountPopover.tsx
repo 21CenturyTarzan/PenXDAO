@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem } from '@mui/material';
 // routes
-import { PATH_DASHBOARD, PATH_AUTH } from '../../../routes/paths';
+import { PATH_APP, PATH_AUTH } from '../../../routes/paths';
 // hooks
 import useAuth from '../../../hooks/useAuth';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
@@ -25,11 +25,11 @@ const MENU_OPTIONS = [
   },
   {
     label: 'Profile',
-    linkTo: PATH_DASHBOARD.user.profile,
+    linkTo: PATH_APP.user.profile,
   },
   {
     label: 'Settings',
-    linkTo: PATH_DASHBOARD.user.account,
+    linkTo: PATH_APP.user.account,
   },
 ];
 
