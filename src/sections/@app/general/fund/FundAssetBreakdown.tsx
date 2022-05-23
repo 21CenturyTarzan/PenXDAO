@@ -14,10 +14,10 @@ import Scrollbar from '../../../../components/Scrollbar';
 type ItemProps = {
   id: string;
   name: string;
-  system: string;
+  assetClass: string;
   price: number;
   rating: number;
-  review: number;
+  performance: number;
   shortcut: string;
 };
 
@@ -51,7 +51,7 @@ type ApplicationItemProps = {
 
 function ApplicationItem({ app }: ApplicationItemProps) {
   const theme = useTheme();
-  const { shortcut, system, price, rating, review, name } = app;
+  const { shortcut, assetClass, price, rating, performance, name } = app;
 
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
@@ -72,31 +72,30 @@ function ApplicationItem({ app }: ApplicationItemProps) {
 
       <Box sx={{ flexGrow: 1, minWidth: 160 }}>
         <Typography variant="subtitle2">{name}</Typography>
-        <Stack direction="row" alignItems="center" sx={{ mt: 0.5, color: 'text.secondary' }}>
-          <Iconify
-            width={16}
-            height={16}
-            icon={system === 'Mac' ? 'ant-design:apple-filled' : 'ant-design:windows-filled'}
-          />
+        
 
-          <Typography variant="caption" sx={{ ml: 0.5, mr: 1 }}>
-            {system}
-          </Typography>
 
           <Label
             variant={theme.palette.mode === 'light' ? 'ghost' : 'filled'}
-            color={price === 0 ? 'success' : 'error'}
+            color={assetClass === 'Cryptocurrency' && 'success' || assetClass === 'Stablecoin' && 'error' || 'info' }
           >
-            {price === 0 ? 'Free' : fCurrency(price)}
+            {assetClass}
           </Label>
-        </Stack>
       </Box>
 
       <Stack alignItems="flex-end" sx={{ pr: 3 }}>
         <Rating readOnly size="small" precision={0.5} name="reviews" value={rating} />
-        <Typography variant="caption" sx={{ mt: 0.5, color: 'text.secondary' }}>
-          {fShortenNumber(review)}&nbsp;reviews
-        </Typography>
+        <Stack direction="row" alignItems="center" sx={{ mt: 0.5, color: 'text.secondary' }}>
+          <Iconify
+              width={16}
+              height={16}
+              icon={assetClass === 'Stable' ? 'ant-design:rise-outlined' : 'ant-design:rise-outlined'}
+            />
+            <Typography variant="caption" sx={{ mt: 0.5, color: 'text.secondary' }}>
+            {fShortenNumber(performance)}&nbsp;%
+            </Typography>
+
+        </Stack>
       </Stack>
     </Stack>
   );

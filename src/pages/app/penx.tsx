@@ -11,27 +11,27 @@ import { _bookings, _bookingNew, _bookingsOverview, _bookingReview } from '../..
 import Page from '../../components/Page';
 // sections
 import {
-  BookingDetails,
-  BookingBookedRoom,
-  BookingTotalIncomes,
-  BookingRoomAvailable,
-  BookingNewestBooking,
-  BookingWidgetSummary,
-  BookingCheckInWidgets,
-  BookingCustomerReviews,
-  BookingReservationStats,
-} from '../../sections/@app/general/booking';
+  PenxDetails,
+  PenxBookedRoom,
+  PenxTotalIncomes,
+  PenxRoomAvailable,
+  PenxNewestBooking,
+  PenxWidgetSummary,
+  PenxCheckInWidgets,
+  PenxCustomerReviews,
+  PenxReservationStats,
+} from '../../sections/@app/general/penx';
 // assets
 import { BookingIllustration, CheckInIllustration, CheckOutIllustration } from '../../assets';
 
 // ----------------------------------------------------------------------
 
-GeneralBooking.getLayout = function getLayout(page: React.ReactElement) {
+GeneralPenx.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
 // ----------------------------------------------------------------------
-export default function GeneralBooking() {
+export default function GeneralPenx() {
   const theme = useTheme();
 
   const { themeStretch } = useSettings();
@@ -41,19 +41,19 @@ export default function GeneralBooking() {
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={4}>
-            <BookingWidgetSummary
-              title="Total Booking"
+            <PenxWidgetSummary
+              title="Total Penx"
               total={714000}
               icon={<BookingIllustration />}
             />
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <BookingWidgetSummary title="Check In" total={311000} icon={<CheckInIllustration />} />
+            <PenxWidgetSummary title="Check In" total={311000} icon={<CheckInIllustration />} />
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <BookingWidgetSummary
+            <PenxWidgetSummary
               title="Check Out"
               total={124000}
               icon={<CheckOutIllustration />}
@@ -63,7 +63,7 @@ export default function GeneralBooking() {
           <Grid item xs={12} md={8}>
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
-                <BookingTotalIncomes
+                <PenxTotalIncomes
                   total={18765}
                   percent={2.6}
                   chartData={[111, 136, 76, 108, 74, 54, 57, 84]}
@@ -71,11 +71,11 @@ export default function GeneralBooking() {
               </Grid>
 
               <Grid item xs={12} md={6}>
-                <BookingBookedRoom title="Booked Room" data={_bookingsOverview} />
+                <PenxBookedRoom title="Booked Room" data={_bookingsOverview} />
               </Grid>
 
               <Grid item xs={12} md={12}>
-                <BookingCheckInWidgets
+                <PenxCheckInWidgets
                   chartData={[
                     { label: 'Check In', percent: 72, total: 38566 },
                     { label: 'Check Out', percent: 64, total: 18472 },
@@ -86,7 +86,7 @@ export default function GeneralBooking() {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <BookingRoomAvailable
+            <PenxRoomAvailable
               title="Room Available"
               data={[
                 { label: 'Sold out', value: 120 },
@@ -97,7 +97,7 @@ export default function GeneralBooking() {
           </Grid>
 
           <Grid item xs={12} md={8}>
-            <BookingReservationStats
+            <PenxReservationStats
               title="Reservation Stats"
               subheader="(+43% Check In | +12% Check Out) than last year"
               chartLabels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']}
@@ -128,7 +128,7 @@ export default function GeneralBooking() {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <BookingCustomerReviews
+            <PenxCustomerReviews
               title="Customer Reviews"
               subheader={`${_bookingReview.length} Reviews`}
               list={_bookingReview}
@@ -136,16 +136,16 @@ export default function GeneralBooking() {
           </Grid>
 
           <Grid item xs={12}>
-            <BookingNewestBooking
-              title="Newest Booking"
-              subheader="12 Booking"
+            <PenxNewestBooking
+              title="Newest Penx"
+              subheader="12 Penx"
               list={_bookingNew}
             />
           </Grid>
 
           <Grid item xs={12}>
-            <BookingDetails
-              title="Booking Details"
+            <PenxDetails
+              title="Penx Details"
               tableData={_bookings}
               tableLabels={[
                 { id: 'booker', label: 'Booker' },

@@ -123,7 +123,7 @@ function CarouselItem({ item, isActive }: CarouselItemProps) {
       >
         <m.div variants={varFade().inRight}>
           <Typography variant="overline" component="div" sx={{ mb: 1, opacity: 0.48 }}>
-            Featured App
+            Pen-X Social Media
           </Typography>
         </m.div>
 

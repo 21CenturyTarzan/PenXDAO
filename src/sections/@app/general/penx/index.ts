@@ -1,0 +1,9 @@
+export { default as PenxDetails } from './PenxDetails';
+export { default as PenxBookedRoom } from './PenxBookedRoom';
+export { default as PenxTotalIncomes } from './PenxTotalIncomes';
+export { default as PenxRoomAvailable } from './PenxRoomAvailable';
+export { default as PenxNewestBooking } from './PenxNewestBooking';
+export { default as PenxCheckInWidgets } from './PenxCheckInWidgets';
+export { default as PenxCustomerReviews } from './PenxCustomerReviews';
+export { default as PenxReservationStats } from './PenxReservationStats';
+export { default as PenxWidgetSummary } from './PenxWidgetSummary';

@@ -16,7 +16,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
   borderRadius: '50%',
   alignItems: 'center',
   justifyContent: 'center',
-  color: theme.palette.primary.main,
+  color: 'orange',
   backgroundColor: alpha(theme.palette.primary.main, 0.08),
 }));
 
@@ -35,14 +35,14 @@ interface Props extends CardProps {
   list: ItemProps[];
 }
 
-export default function AppTopAuthors({ title, subheader, list, ...other }: Props) {
+export default function FundTopOrgs({ title, subheader, list, ...other }: Props) {
   return (
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
 
       <Stack spacing={3} sx={{ p: 3 }}>
-        {orderBy(list, ['favourite'], ['desc']).map((author, index) => (
-          <AuthorItem key={author.id} author={author} index={index} />
+        {orderBy(list, ['favourite'], ['desc']).map((org, index) => (
+          <OrgItem key={org.id} org={org} index={index} />
         ))}
       </Stack>
     </Card>
@@ -51,18 +51,18 @@ export default function AppTopAuthors({ title, subheader, list, ...other }: Prop
 
 // ----------------------------------------------------------------------
 
-type AuthorItemProps = {
-  author: ItemProps;
+type OrgItemProps = {
+  org: OrgProps;
   index: number;
 };
 
-function AuthorItem({ author, index }: AuthorItemProps) {
+function OrgItem({ org, index }: OrgItemProps) {
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
-      <Avatar alt={author.name} src={author.avatar} />
+      <Avatar alt={org.orgName} src={org.avatar} />
 
       <Box sx={{ flexGrow: 1 }}>
-        <Typography variant="subtitle2">{author.name}</Typography>
+        <Typography variant="subtitle2">{org.orgName}</Typography>
 
         <Typography
           variant="caption"
@@ -73,20 +73,23 @@ function AuthorItem({ author, index }: AuthorItemProps) {
             color: 'text.secondary',
           }}
         >
-          <Iconify icon={'eva:heart-fill'} sx={{ width: 16, height: 16, mr: 0.5 }} />
-          {fShortenNumber(author.favourite)}
+          <Iconify icon={'eva:star-fill'} sx={{ width: 16, height: 16, mr: 0.5 }} />
+          {fShortenNumber(org.favourite)}
         </Typography>
       </Box>
 
       <IconWrapperStyle
         sx={{
           ...(index === 1 && {
-            color: 'info.main',
+            color: 'gray',
             bgcolor: (theme) => alpha(theme.palette.info.main, 0.08),
           }),
           ...(index === 2 && {
-            color: 'error.main',
+            color: 'brown',
             bgcolor: (theme) => alpha(theme.palette.error.main, 0.08),
+          }),
+          ...(index > 2 && {
+            display: 'none',
           }),
         }}
       >
