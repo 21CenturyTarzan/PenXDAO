@@ -30,7 +30,7 @@ type Props = {
 };
 
 export default function UserCard({ user }: Props) {
-  const { name, cover, position, follower, totalPost, avatarUrl, following } = user;
+  const { orgName, cover, position, follower, totalPost, avatarUrl, following } = user;
 
   return (
     <Card sx={{ textAlign: 'center' }}>
@@ -50,7 +50,7 @@ export default function UserCard({ user }: Props) {
           }}
         />
         <Avatar
-          alt={name}
+          alt={orgName}
           src={avatarUrl}
           sx={{
             width: 64,
@@ -68,7 +68,7 @@ export default function UserCard({ user }: Props) {
       </Box>
 
       <Typography variant="subtitle1" sx={{ mt: 6 }}>
-        {name}
+        {orgName}
       </Typography>
 
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>

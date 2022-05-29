@@ -17,7 +17,6 @@ import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // sections
 import {
   AccountGeneral,
-  AccountBilling,
   AccountSocialLinks,
   AccountNotifications,
   AccountChangePassword,

@@ -62,11 +62,7 @@ export type WorkerManager = {
   name: string;
   email: string;
   phoneNumber: string;
-  address: string;
-  country: string;
-  state: string;
-  city: string;
-  zipCode: string;
+  ethAddress: string;
   department: string;
   isVerified: boolean;
   status: string;

@@ -47,29 +47,24 @@ export default function WorkerNewEditForm({ isEdit = false, currentWorker }: Pro
     name: Yup.string().required('Name is required'),
     email: Yup.string().required('Email is required').email(),
     phoneNumber: Yup.string().required('Phone number is required'),
-    address: Yup.string().required('Address is required'),
-    country: Yup.string().required('country is required'),
+    ethAddress: Yup.string().required('ETH Address is required'),
     department: Yup.string().required('Department is required'),
-    state: Yup.string().required('State is required'),
-    city: Yup.string().required('City is required'),
+    unlockDate: Yup.date().required('Retirement Date is required'),
     role: Yup.string().required('Role Number is required'),
   });
-
+  
   const defaultValues = useMemo(
     () => ({
       name: currentWorker?.name || '',
       email: currentWorker?.email || '',
       phoneNumber: currentWorker?.phoneNumber || '',
-      address: currentWorker?.address || '',
-      country: currentWorker?.country || '',
-      state: currentWorker?.state || '',
-      city: currentWorker?.city || '',
-      zipCode: currentWorker?.zipCode || '',
+      ethAddress: currentWorker?.ethAddress || '',
       avatarUrl: currentWorker?.avatarUrl || '',
       isVerified: currentWorker?.isVerified || true,
       status: currentWorker?.status,
       department: currentWorker?.department || '',
       role: currentWorker?.role || '',
+      unlockDate: currentWorker?.unlockDate || '',
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [currentWorker]
@@ -255,7 +250,7 @@ export default function WorkerNewEditForm({ isEdit = false, currentWorker }: Pro
                 InputProps={{
                   startAdornment: <InputAdornment position="start">%</InputAdornment>,
                 }}/>
-              
+
                 <Controller
                   name="unlockDate"
                   control={control}
@@ -267,7 +262,8 @@ export default function WorkerNewEditForm({ isEdit = false, currentWorker }: Pro
                         field.onChange(newValue);
                       }}
                       renderInput={(params) => (
-                        <RHFTextField {...params} fullWidth error={!!error} helperText={error?.message} />
+                        <RHFTextField 
+                        name="unlockDate" {...params} fullWidth error={!!error} helperText={error?.message} />
                       )}
                     />
                   )}

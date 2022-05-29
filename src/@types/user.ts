@@ -10,6 +10,24 @@ export type SocialLinks = {
   twitterLink: string;
 };
 
+export type Profile = {
+  id: string;
+  cover: string;
+  position: string;
+  follower: number;
+  following: number;
+  quote: string;
+  country: string;
+  email: string;
+  company: string;
+  school: string;
+  role: string;
+  facebookLink: string;
+  instagramLink: string;
+  linkedinLink: string;
+  twitterLink: string;
+};
+
 export type UserManager = {
   id: string;
   orgName: string;
@@ -49,3 +67,65 @@ export type NotificationSettings = {
   applicationBlog: boolean;
 };
 
+
+
+export type Follower = {
+  id: string;
+  avatarUrl: string;
+  name: string;
+  country: string;
+  isFollowed: boolean;
+};
+
+export type Friend = {
+  id: string;
+  avatarUrl: string;
+  name: string;
+  role: string;
+};
+
+export type UserPost = {
+  id: string;
+  author: {
+    id: string;
+    avatarUrl: string;
+    name: string;
+  };
+  isLiked: boolean;
+  createdAt: Date | string | number;
+  media: string;
+  message: string;
+  personLikes: {
+    name: string;
+    avatarUrl: string;
+  }[];
+  comments: {
+    id: string;
+    author: {
+      id: string;
+      avatarUrl: string;
+      name: string;
+    };
+    createdAt: Date | string | number;
+    message: string;
+  }[];
+};
+
+
+export type Gallery = {
+  id: string;
+  title: string;
+  postAt: Date | string | number;
+  imageUrl: string;
+};
+
+export type UserAddressBook = {
+  id: string;
+  name: string;
+  phone: string;
+  country: string;
+  state: string;
+  city: string;
+  street: string;
+  zipCode: string;
+};

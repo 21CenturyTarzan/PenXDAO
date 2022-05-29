@@ -124,7 +124,7 @@ export const _workerList = [...Array(24)].map((_, index) => ({
   name: _mock.name.fullName(index),
   email: _mock.email(index),
   phoneNumber: _mock.phoneNumber(index),
-  address: '908 Jack Locks',
+  ethAddress: '0x3daf780adef8078aedf087fea08',
   country: _mock.address.country(index),
   state: 'Virginia',
   city: 'Rancho Cordova',

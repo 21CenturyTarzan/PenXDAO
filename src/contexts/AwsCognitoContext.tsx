@@ -192,14 +192,14 @@ function AuthProvider({ children }: AuthProviderProps) {
     }
   };
 
-  const register = (email: string, password: string, firstName: string, lastName: string) =>
+  const register = (email: string, password: string, orgName: string) =>
     new Promise((resolve, reject) => {
       UserPool.signUp(
         email,
         password,
         [
           new CognitoUserAttribute({ Name: 'email', Value: email }),
-          new CognitoUserAttribute({ Name: 'name', Value: `${firstName} ${lastName}` }),
+          new CognitoUserAttribute({ Name: 'orgName', Value: `${orgName}` }),
         ],
         [],
         async (err) => {
@@ -219,7 +219,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         ...state,
         method: 'cognito',
         user: {
-          displayName: state?.user?.name || 'Minimals',
+          displayName: state?.user?.orgName || 'Minimals',
           role: 'admin',
           ...state.user,
         },

@@ -16,7 +16,6 @@ import { Schedule, ScheduleItem } from '../../../../@types/schedule';
 import { FormProvider } from '../../../../components/hook-form';
 //
 import ScheduleNewEditDetails from './ScheduleNewEditDetails';
-import ScheduleNewEditAddress from './ScheduleNewEditAddress';
 import ScheduleNewEditStatusDate from './ScheduleNewEditStatusDate';
 
 // ----------------------------------------------------------------------
@@ -48,15 +47,16 @@ export default function ScheduleNewEditForm({ isEdit, currentSchedule }: Props) 
 
   const defaultValues = useMemo(
     () => ({
-      invoiceNumber: currentSchedule?.scheduleId || '17099',
+      scheduleID: currentSchedule?.scheduleId || '17099',
+      scheduleName: currentSchedule?.scheduleName || '',
+      scheduleYear: currentSchedule?.scheduleYear || 0,
+      scheduleMonth: currentSchedule?.scheduleMonth || 0,
       createDate: currentSchedule?.createDate || null,
       dueDate: currentSchedule?.dueDate || null,
       status: currentSchedule?.status || 'draft',
       discount: currentSchedule?.discount || '',
-      // invoiceFrom: currentSchedule?.invoiceFrom || _invoiceAddressFrom[0],
-      // invoiceTo: currentSchedule?.invoiceTo || null,
       items: currentSchedule?.items || [
-        { title: '', description: '', service: '', quantity: 0, price: 0, total: 0 },
+        { workerId: '', compensation: 0, daoContribution: 0, workerContribution: 0, totalContribution: 0 },
       ],
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps

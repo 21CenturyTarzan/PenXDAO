@@ -24,8 +24,8 @@ export default function SchedulePDF({ schedule }: Props) {
     scheduleMonth,
     scheduleYear,
     createDate,
-    totalContribution,
-    subTotalPrice,
+    amount,
+    subAmount,
   } = schedule;
 
   return (
@@ -120,7 +120,7 @@ export default function SchedulePDF({ schedule }: Props) {
                 <Text>Subtotal</Text>
               </View>
               <View style={[styles.tableCell_3, styles.alignRight]}>
-                <Text>{fCurrency(subTotalPrice)}</Text>
+                <Text>{fCurrency(subAmount)}</Text>
               </View>
             </View>
 
@@ -144,7 +144,7 @@ export default function SchedulePDF({ schedule }: Props) {
                 <Text style={styles.h4}>Total</Text>
               </View>
               <View style={[styles.tableCell_3, styles.alignRight]}>
-                <Text style={styles.h4}>{fCurrency(totalContribution)}</Text>
+                <Text style={styles.h4}>{fCurrency(amount)}</Text>
               </View>
             </View>
           </View>
