@@ -30,8 +30,8 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'support@minimals.cc', href: '#' },
-      { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' },
+      { name: 'contact@penxdao.com', href: '#' },
+      { name: 'https://penxdao.com', href: 'https://penxdao.com' },
     ],
   },
 ];
@@ -58,8 +58,7 @@ export default function MainFooter() {
           </Grid>
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              The starting point for your next project with Minimal UI Kit, built on the newest
-              version of Material-UI ©, ready to be customized to your style.
+            We are disrupting the traditional pension market with the world's first DeFi retirement fund. Managed by the people of today to help the retiree of tomorrow.
             </Typography>
 
             <Stack
@@ -105,7 +104,7 @@ export default function MainFooter() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          © 2021. All rights reserved
+          © 2022. All rights reserved
         </Typography>
       </Container>
     </RootStyle>

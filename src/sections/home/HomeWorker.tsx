@@ -31,13 +31,13 @@ export default function HomeLookingFor() {
           <Grid item xs={12} md={4} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <m.div variants={varFade().inDown}>
               <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
-                Looking For a
+                Are you a worker?
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inDown}>
               <Typography variant="h2" sx={{ mt: 2, mb: 5 }}>
-                Landing Page Template?
+                Want your employer to use Pen-X?
               </Typography>
             </m.div>
 
@@ -48,10 +48,10 @@ export default function HomeLookingFor() {
                 variant="outlined"
                 target="_blank"
                 rel="noopener"
-                href="https://material-ui.com/store/items/zone-landing-page/"
+                href="https://docs.penxdao.com"
                 endIcon={<Iconify icon={'ic:round-arrow-right-alt'} />}
               >
-                Visit Zone Landing
+                Introduce your employer
               </Button>
             </m.div>
           </Grid>

@@ -91,14 +91,14 @@ export default function HomeHugePackElements() {
                   variant="overline"
                   sx={{ mb: 2, color: 'text.disabled' }}
                 >
-                  Interface Starter Kit
+                  Pen-X Protocol
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography variant="h2" sx={{ mb: 3 }}>
-                  Huge pack <br />
-                  of elements
+                  A new path to<br />
+                  future wealth
                 </Typography>
               </m.div>
 
@@ -109,8 +109,7 @@ export default function HomeHugePackElements() {
                     color: isLight ? 'text.secondary' : 'common.white',
                   }}
                 >
-                  We collected most popular elements. Menu, sliders, buttons, inputs etc. are all
-                  here. Just dive in!
+                  Instead of locking your funds until retirement, Pen-X leaves investors in full control, incentivising retirement saving with a transparent Longevity Reward Scheme.
                 </Typography>
               </m.div>
 
@@ -121,9 +120,9 @@ export default function HomeHugePackElements() {
                   variant="outlined"
                   target="_blank"
                   rel="noopener"
-                  href="https://www.minimals.cc/components/"
+                  href="https://docs.penxdao.com/"
                 >
-                  View All Components
+                  Product Documentation
                 </Button>
               </m.div>
             </ContentStyle>
@@ -138,20 +137,17 @@ export default function HomeHugePackElements() {
                 justifyContent: 'center',
               }}
             >
-              {[...Array(3)].map((_, index) => (
+              {[...Array(2)].map((_, index) => (
                 <ScreenStyle
                   key={index}
                   variants={{
                     ...(index === 0 && screenLeftAnimate),
-                    ...(index === 1 && screenCenterAnimate),
+                    ...(index === 1 && screenRightAnimate),
                     ...(index === 2 && screenRightAnimate),
                   }}
                   transition={{ duration: 0.72, ease: 'easeOut' }}
                   sx={{
-                    boxShadow: `${isRTL ? -80 : 80}px -40px 80px ${alpha(
-                      isLight ? theme.palette.grey[600] : theme.palette.common.black,
-                      0.48
-                    )}`,
+                    'background-color':'transparent',
                     ...(index === 0 && {
                       zIndex: 3,
                       position: 'absolute',
@@ -166,10 +162,8 @@ export default function HomeHugePackElements() {
                 >
                   <Image
                     disabledEffect
-                    alt={`screen ${index + 1}`}
-                    src={`https://minimal-assets-api-dev.vercel.app/assets/images/home/screen_${
-                      isLight ? 'light' : 'dark'
-                    }_${index + 1}.png`}
+                    alt={`product ${index + 1}`}
+                    src={`assets/home/product-${index + 1}.png`}
                   />
                 </ScreenStyle>
               ))}

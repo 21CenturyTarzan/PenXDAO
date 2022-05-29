@@ -10,6 +10,9 @@ import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
 import TextIconLabel from '../../components/TextIconLabel';
 import { MotionContainer, varFade } from '../../components/animate';
+// icons
+const Gitbook = '../../assets/icons/gitbook-logo.png';
+const Discord = '../../assets/icons/discord-logo.png';
 
 // ----------------------------------------------------------------------
 
@@ -76,7 +79,7 @@ export default function HomeHero() {
 
         <HeroImgStyle
           alt="hero"
-          src="https://minimal-assets-api-dev.vercel.app/assets/images/home/hero.png"
+          src="/assets/hero.png"
           variants={varFade().inUp}
         />
 
@@ -103,8 +106,8 @@ export default function HomeHero() {
                 <TextIconLabel
                   icon={
                     <Image
-                      alt="sketch icon"
-                      src="https://minimal-assets-api-dev.vercel.app/assets/images/home/ic_sketch_small.svg"
+                      alt="discord icon"
+                      src={Discord}
                       sx={{ width: 20, height: 20, mr: 1 }}
                     />
                   }
@@ -127,7 +130,7 @@ export default function HomeHero() {
                   icon={
                     <Image
                       alt="sketch icon"
-                      src="https://minimal-assets-api-dev.vercel.app/assets/images/home/ic_figma_small.svg"
+                      src={Gitbook}
                       sx={{ width: 20, height: 20, mr: 1 }}
                     />
                   }
@@ -161,7 +164,7 @@ export default function HomeHero() {
             <Stack spacing={2.5}>
               <m.div variants={varFade().inRight}>
                 <Typography variant="overline" sx={{ color: 'primary.light' }}>
-                  Available For
+                  In partnership with
                 </Typography>
               </m.div>
 
@@ -170,11 +173,14 @@ export default function HomeHero() {
                 spacing={1.5}
                 justifyContent={{ xs: 'center', md: 'flex-start' }}
               >
-                {['ic_sketch', 'ic_figma', 'ic_js', 'ic_ts', 'ic_nextjs'].map((resource) => (
+                {[
+                'https://minimal-assets-api-dev.vercel.app/assets/images/home/ic_js.svg', 
+                'https://minimal-assets-api-dev.vercel.app/assets/images/home/ic_ts.svg', 
+                'https://minimal-assets-api-dev.vercel.app/assets/images/home/ic_nextjs.svg'].map((resource) => (
                   <m.img
                     key={resource}
                     variants={varFade().inRight}
-                    src={`https://minimal-assets-api-dev.vercel.app/assets/images/home/${resource}.svg`}
+                    src={`${resource}`}
                   />
                 ))}
               </Stack>

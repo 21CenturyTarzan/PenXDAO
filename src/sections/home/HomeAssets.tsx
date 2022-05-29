@@ -10,7 +10,7 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const IMG = [...Array(10)].map(
   (_, index) =>
-    `https://minimal-assets-api-dev.vercel.app/assets/images/home/clean-${index + 1}.png`
+    `assets/home/asset-${index + 1}.png`
 );
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -31,7 +31,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function HomeCleanInterfaces() {
+export default function HomeAssets() {
   const theme = useTheme();
 
   const isLight = theme.palette.mode === 'light';
@@ -42,7 +42,7 @@ export default function HomeCleanInterfaces() {
         <ContentStyle>
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-              clean & clear
+              Pen-X Fund
             </Typography>
           </m.div>
 
@@ -56,7 +56,7 @@ export default function HomeCleanInterfaces() {
                 }),
               }}
             >
-              The Web3 Pension Fund
+              Broad Asset Diversification
             </Typography>
           </m.div>
         </ContentStyle>
@@ -78,8 +78,8 @@ export default function HomeCleanInterfaces() {
               <Image
                 disabledEffect
                 visibleByDefault
-                alt={`clean-${index + 1}`}
-                src={`https://minimal-assets-api-dev.vercel.app/assets/images/home/clean-${
+                alt={`asset-${index + 1}`}
+                src={`assets/home/asset-${
                   index + 1
                 }.png`}
               />

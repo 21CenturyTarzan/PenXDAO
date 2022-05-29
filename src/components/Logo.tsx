@@ -2,31 +2,27 @@ import { forwardRef } from 'react';
 import NextLink from 'next/link';
 // @mui
 import { useTheme } from '@mui/material/styles';
+import Image from '../components/Image';
 import { Box, BoxProps } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
 interface Props extends BoxProps {
-  disabledLink?: boolean;
+  variant?: 'full' | 'icon';
 }
 
-const Logo = forwardRef<any, Props>(({ disabledLink = false, sx }, ref) => {
+const Logo = forwardRef<any, Props>(({ sx, variant }, ref) => {
   const theme = useTheme();
-
+  console.log(theme);
   const PRIMARY_LIGHT = theme.palette.primary.light;
-
   const PRIMARY_MAIN = theme.palette.primary.main;
-
   const PRIMARY_DARK = theme.palette.primary.dark;
-
   // const PRIMARY_MAIN = "#047cbf";
   const SECONDARY_MAIN = "#000";
   
+  const fullLogo = (<Image src="/logo/logo_full.png" style={{ width: 100 }}></Image>);
 
-  // OR
-  // const logo = '/logo/logo_single.svg';
-
-  const logo = (
+  const iconLogo = (
     <Box ref={ref} sx={{ width: 40, height: 40, cursor: 'pointer', ...sx }}>
 
       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 200 200">
@@ -76,11 +72,24 @@ const Logo = forwardRef<any, Props>(({ disabledLink = false, sx }, ref) => {
     </Box>
   );
 
-  if (disabledLink) {
-    return <>{logo}</>;
+  if (variant === 'full') {
+    return <NextLink href="/">{fullLogo}</NextLink>;
   }
 
-  return <NextLink href="/">{logo}</NextLink>;
+  return <NextLink href="/">{iconLogo}</NextLink>;
 });
 
 export default Logo;
+
+
+// export default function myLogo({
+//   variant,
+// }: LogoProps) {
+//   if (variant==='full') {
+//     return Logo;
+//   }
+//   if (variant==='icon') {
+//     return Logo;
+//   }
+//   return Logo;
+// }

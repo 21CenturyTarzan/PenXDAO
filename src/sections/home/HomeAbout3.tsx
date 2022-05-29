@@ -1,7 +1,7 @@
 import { m } from 'framer-motion';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Grid, Container, Typography } from '@mui/material';
+import { Box, Button, Grid, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
 import { MotionViewport, varFade } from '../../components/animate';
@@ -30,7 +30,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function HomeDarkMode() {
+export default function HomeAbout3() {
   return (
     <RootStyle>
       <Container component={MotionViewport} sx={{ position: 'relative' }}>
@@ -38,7 +38,7 @@ export default function HomeDarkMode() {
           visibleByDefault
           disabledEffect
           alt="image shape"
-          src="https://minimal-assets-api-dev.vercel.app/assets/images/home/shape.svg"
+          src="assets/home/shape.svg"
           sx={{
             top: 0,
             right: 0,
@@ -61,20 +61,34 @@ export default function HomeDarkMode() {
                   variant="overline"
                   sx={{ mb: 2, color: 'text.disabled' }}
                 >
-                  Easy switch between styles.
+                  Set and forget
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography variant="h2" sx={{ mb: 3, color: 'common.white' }}>
-                  Dark mode
+                  Simple exposure to complex strategies.
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white', mb: 5 }}>
-                  A dark theme that feels easier on the eyes.
+                Broad diversification across a groundbreaking variety of instruments and strategies. Lower risk profile than typical crypto assets for viable long-term investing. All through a simple DAO-managed, passive investment vehicle.
                 </Typography>
+              </m.div>
+
+
+              <m.div variants={varFade().inUp}>
+                <Button
+                  size="large"
+                  color="inherit"
+                  variant="contained"
+                  target="_blank"
+                  rel="noopener"
+                  href="https://docs.penxdao.com/"
+                >
+                  Read Fund Documentation
+                </Button>
               </m.div>
             </ContentStyle>
           </Grid>
@@ -82,10 +96,11 @@ export default function HomeDarkMode() {
           <Grid item xs={12} md={7} sx={{ position: 'relative' }}>
             <m.div variants={varFade().inUp}>
               <Image
-                alt="light mode"
-                src="https://minimal-assets-api-dev.vercel.app/assets/images/home/lightmode.png"
+                alt="Pen-X About"
+                src="assets/home/about3-image1.png"
               />
             </m.div>
+
 
             <Box
               component={m.div}
@@ -93,8 +108,8 @@ export default function HomeDarkMode() {
               sx={{ top: 0, left: 0, position: 'absolute' }}
             >
               <Image
-                alt="dark mode"
-                src="https://minimal-assets-api-dev.vercel.app/assets/images/home/darkmode.png"
+                alt="Pen-X About"
+                src="assets/home/about3-image2.png"
               />
             </Box>
           </Grid>

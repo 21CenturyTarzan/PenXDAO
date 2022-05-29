@@ -10,20 +10,20 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const CARDS = [
   {
-    icon: 'https://minimal-assets-api-dev.vercel.app/assets/icons/ic_design.svg',
-    title: 'UI & UX Design',
+    icon: 'assets/icons/cycle-icon.webp',
+    title: 'Simple & Passive',
     description:
-      'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
+      'Investing in DeFi should be simple. Pen-X DAO-managed funds provide straightforward, zero-maintenance exposure to the market.',
   },
   {
-    icon: 'https://minimal-assets-api-dev.vercel.app/assets/icons/ic_code.svg',
-    title: 'Development',
-    description: 'Easy to customize and extend each component, saving you time and money.',
+    icon: 'assets/icons/growth-icon.webp',
+    title: 'Long Term Stability',
+    description: 'Pen-X hedges against volatility by diversifying capital across a groundbreaking range of asset classes and strategies.',
   },
   {
-    icon: '/logo/logo_single.svg',
-    title: 'Branding',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    icon: 'assets/icons/search-icon.webp',
+    title: 'Low Cost & Transparent',
+    description: 'Pen-X offers greater transparency than traditional funds. All positions are 100% auditable on the blockchain in real-time.',
   },
 ];
 
@@ -100,11 +100,11 @@ export default function HomeMinimal() {
         >
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-              Minimal
+              The Pen-X Pension Fund
             </Typography>
           </m.div>
           <m.div variants={varFade().inDown}>
-            <Typography variant="h2">What minimal helps you?</Typography>
+            <Typography variant="h2">How can Pen-X help your organisation?</Typography>
           </m.div>
         </Box>
 
@@ -128,12 +128,12 @@ export default function HomeMinimal() {
                     mx: 'auto',
                     width: 40,
                     height: 40,
-                    filter: (theme) => shadowIcon(theme.palette.primary.main),
+                    filter: (theme) => shadowIcon(theme.palette.info.main),
                     ...(index === 0 && {
-                      filter: (theme) => shadowIcon(theme.palette.info.main),
+                      filter: (theme) => shadowIcon(theme.palette.warning.main),
                     }),
                     ...(index === 1 && {
-                      filter: (theme) => shadowIcon(theme.palette.error.main),
+                      filter: (theme) => shadowIcon(theme.palette.success.main),
                     }),
                   }}
                 />

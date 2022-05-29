@@ -75,11 +75,7 @@ export default function MainHeader() {
             justifyContent: 'space-between',
           }}
         >
-          <Logo />
-
-          <Label color="info" sx={{ ml: 1 }}>
-            v3.4.0
-          </Label>
+          <Logo variant="full"/>
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -89,9 +85,9 @@ export default function MainHeader() {
             variant="contained"
             target="_blank"
             rel="noopener"
-            href="https://material-ui.com/store/items/minimal-dashboard/"
+            href="/app"
           >
-            Purchase Now
+            Launch App
           </Button>
 
           {!isDesktop && <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
