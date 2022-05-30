@@ -64,7 +64,7 @@ declare module '@mui/material' {
 const PRIMARY = {
   lighter: '#C8FACD',
   light: '#5BE584',
-  main: '#00AB55',
+  main: '#00AF54',
   dark: '#007B55',
   darker: '#005249',
 };
@@ -113,7 +113,7 @@ const GREY = {
   500: '#919EAB',
   600: '#637381',
   700: '#454F5B',
-  800: '#212B36',
+  800: '#191A35',
   900: '#161C24',
   500_8: alpha('#919EAB', 0.08),
   500_12: alpha('#919EAB', 0.12),
@@ -136,7 +136,7 @@ const GRADIENTS = {
 const CHART_COLORS = {
   violet: ['#826AF9', '#9E86FF', '#D0AEFF', '#F7D2FF'],
   blue: ['#2D99FF', '#83CFFF', '#A5F3FF', '#CCFAFF'],
-  green: ['#2CD9C5', '#60F1C8', '#A4F7CC', '#C0F2DC'],
+  green: ['#00AF54', '#60F1C8', '#A4F7CC', '#C0F2DC'],
   yellow: ['#FFE700', '#FFEF5A', '#FFF7AE', '#FFF3D6'],
   red: ['#FF6C40', '#FF8F6D', '#FFBD98', '#FFF2D4'],
 };
@@ -153,6 +153,7 @@ const COMMON = {
   gradients: GRADIENTS,
   chart: CHART_COLORS,
   divider: GREY[500_24],
+  black: '#191A35',
   action: {
     hover: GREY[500_8],
     selected: GREY[500_16],

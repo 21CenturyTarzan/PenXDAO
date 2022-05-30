@@ -20,7 +20,7 @@ const Logo = forwardRef<any, Props>(({ sx, variant }, ref) => {
   // const PRIMARY_MAIN = "#047cbf";
   const SECONDARY_MAIN = "#000";
   
-  const fullLogo = (<Image src="/logo/logo_full.png" style={{ width: 100 }}></Image>);
+  const fullLogo = (<Image src="/logo/logo_full.svg" style={{ width: 150 }}></Image>);
 
   const iconLogo = (
     <Box ref={ref} sx={{ width: 40, height: 40, cursor: 'pointer', ...sx }}>

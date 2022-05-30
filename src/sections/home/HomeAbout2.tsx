@@ -4,6 +4,7 @@ import { alpha, useTheme, styled } from '@mui/material/styles';
 import { Box, Grid, Button, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
+import Iconify from '../../components/Iconify';
 import { MotionViewport, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
@@ -121,6 +122,7 @@ export default function HomeHugePackElements() {
                   target="_blank"
                   rel="noopener"
                   href="https://docs.penxdao.com"
+                  endIcon={<Iconify icon={'ic:round-arrow-right-alt'}/>}
                 >
                   Get Started
                 </Button>

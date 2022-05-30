@@ -18,7 +18,7 @@ const Discord = '../../assets/icons/discord-logo.png';
 
 const RootStyle = styled(m.div)(({ theme }) => ({
   position: 'relative',
-  backgroundColor: theme.palette.grey[400],
+  backgroundColor: 'white',
   [theme.breakpoints.up('md')]: {
     top: 0,
     left: 0,
@@ -101,6 +101,20 @@ export default function HomeHero() {
               </Typography>
             </m.div>
 
+            
+
+            <m.div variants={varFade().inRight}>
+              <NextLink href={PATH_APP.root} passHref>
+                <Button
+                  size="large"
+                  variant="contained"
+                  startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
+                >
+                  Launch App
+                </Button>
+              </NextLink>
+            </m.div>
+
             <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
               <m.div variants={varFade().inRight}>
                 <TextIconLabel
@@ -149,19 +163,7 @@ export default function HomeHero() {
               </m.div>
             </Stack>
 
-            <m.div variants={varFade().inRight}>
-              <NextLink href={PATH_APP.root} passHref>
-                <Button
-                  size="large"
-                  variant="contained"
-                  startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
-                >
-                  Launch App
-                </Button>
-              </NextLink>
-            </m.div>
-
-            <Stack spacing={2.5}>
+            {/* <Stack spacing={2.5}>
               <m.div variants={varFade().inRight}>
                 <Typography variant="overline" sx={{ color: 'primary.light' }}>
                   In partnership with
@@ -184,7 +186,7 @@ export default function HomeHero() {
                   />
                 ))}
               </Stack>
-            </Stack>
+            </Stack> */}
           </ContentStyle>
         </Container>
       </RootStyle>

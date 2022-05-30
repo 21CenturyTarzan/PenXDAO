@@ -35,7 +35,7 @@ const navConfig = [
     subheader: 'general',
     items: [
       { title: 'Pen-X Fund', path: PATH_APP.general.fund, icon: ICONS.analytics },
-      { title: '$PENX', path: PATH_APP.general.penx, icon: ICONS.ecommerce },
+      { title: '$PENX',  icon: ICONS.ecommerce, path: PATH_APP.permissionDenied, },
       // { title: 'analytics', path: PATH_APP.general.analytics, icon: ICONS.analytics },
       // { title: 'booking', path: PATH_APP.general.booking, icon: ICONS.booking },
     ],
