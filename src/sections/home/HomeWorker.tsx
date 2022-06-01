@@ -97,7 +97,7 @@ export default function HomeLookingFor() {
                     color: isLight ? 'text.secondary' : 'common.white',
                   }}
                 >
-                  Pen-X aims to evolve the DAO ecosystem, working with Web3 employers and leading the wave in the D2D (DAO-to-DAO) financial services sector.  We are launching a D2D retirement fund, true to the DeFi ethos.
+                  Whether you run a DeFi DAO, launched your own NFT project or manage a gaming guild, we collaborate with anyone who wants to give retirement security to their team. Please reach out and ask about our partner bounty program.
                 </Typography>
               </m.div>
 
@@ -111,7 +111,7 @@ export default function HomeLookingFor() {
                   href="https://docs.penxdao.com"
                   endIcon={<Iconify icon={'ic:round-arrow-right-alt'}/>}
                 >
-                  Introduce your employer
+                  Sign Up Now
                 </Button>
               </m.div>
             </ContentStyle>

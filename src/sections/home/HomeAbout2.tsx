@@ -92,14 +92,14 @@ export default function HomeHugePackElements() {
                   variant="overline"
                   sx={{ mb: 2, color: 'text.disabled' }}
                 >
-                  WEB3 BENEFITS
+                  THE PEN-X PENSION FUND
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography variant="h2" sx={{ mb: 3 }}>
-                Financially secure<br />
-                  employees
+                Simple exposure to<br />
+                complex strategies
                 </Typography>
               </m.div>
 
@@ -110,7 +110,7 @@ export default function HomeHugePackElements() {
                     color: isLight ? 'text.secondary' : 'common.white',
                   }}
                 >
-                  Pen-X aims to evolve the DAO ecosystem, working with Web3 employers and leading the wave in the D2D (DAO-to-DAO) financial services sector.  We are launching a D2D retirement fund, true to the DeFi ethos.
+                  The Pen-X Pension Fund is broadly diversified across on-chain assets, using yield farming and volatility target strategies to achieve long-term, stable returns in all market environments.
                 </Typography>
               </m.div>
 
@@ -124,7 +124,7 @@ export default function HomeHugePackElements() {
                   href="https://docs.penxdao.com"
                   endIcon={<Iconify icon={'ic:round-arrow-right-alt'}/>}
                 >
-                  Get Started
+                  Learn More
                 </Button>
               </m.div>
             </ContentStyle>

@@ -40,8 +40,8 @@ const ContentStyle = styled((props: StackProps) => <Stack spacing={5} {...props}
     paddingTop: theme.spacing(15),
     paddingBottom: theme.spacing(15),
     [theme.breakpoints.up('md')]: {
-      margin: 'unset',
-      textAlign: 'left',
+      marginRight: '10%',
+      textAlign: 'right',
     },
   })
 );
@@ -77,11 +77,11 @@ export default function HomeHero() {
       <RootStyle>
         <HeroOverlayStyle alt="overlay" src="/assets/overlay.svg" variants={varFade().in} />
 
-        <HeroImgStyle
+        {/* <HeroImgStyle
           alt="hero"
           src="/assets/hero.png"
           variants={varFade().inUp}
-        />
+        /> */}
 
         <Container>
           <ContentStyle>
@@ -102,20 +102,33 @@ export default function HomeHero() {
             </m.div>
 
             
+            <Stack spacing={2.5} alignItems="right" justifyContent="right" direction={{ xs: 'column', md: 'row' }}>
 
             <m.div variants={varFade().inRight}>
-              <NextLink href={PATH_APP.root} passHref>
-                <Button
-                  size="large"
-                  variant="contained"
-                  startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
-                >
-                  Launch App
-                </Button>
-              </NextLink>
-            </m.div>
+                <NextLink href={PATH_APP.root} passHref>
+                  <Button
+                    size="large"
+                    variant="outlined"
+                    startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
+                  >
+                    Launch App
+                  </Button>
+                </NextLink>
+              </m.div>
+              <m.div variants={varFade().inRight}>
+                <NextLink href='https://docs.penxdao.com' passHref>
+                  <Button
+                    size="large"
+                    variant="contained"
+                    startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
+                  >
+                    Read Documentation
+                  </Button>
+                </NextLink>
+              </m.div>
+            </Stack>
 
-            <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
+            <Stack spacing={2.5} alignItems="right" justifyContent="right" direction={{ xs: 'column', md: 'row' }}>
               <m.div variants={varFade().inRight}>
                 <TextIconLabel
                   icon={
@@ -139,7 +152,7 @@ export default function HomeHero() {
                 />
               </m.div>
 
-              <m.div variants={varFade().inRight}>
+              {/* <m.div variants={varFade().inRight}>
                 <TextIconLabel
                   icon={
                     <Image
@@ -160,7 +173,7 @@ export default function HomeHero() {
                     </Link>
                   }
                 />
-              </m.div>
+              </m.div> */}
             </Stack>
 
             {/* <Stack spacing={2.5}>

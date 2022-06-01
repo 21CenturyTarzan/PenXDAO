@@ -40,9 +40,10 @@ export default function HomePage() {
       <HomeHero />
 
       <ContentStyle>
+        <HomeAbout1 />
+        <HomeAbout2 />
         <HomeUsp />
 
-        <HomeAbout1 />
 
         <HomeAbout3 />
 
@@ -50,13 +51,12 @@ export default function HomePage() {
 
         <HomeAssets />
 
-        <HomeAbout2 />
 
         {/* <HomePricingPlans /> */}
 
         <HomeWorker />
 
-        <HomeAdvertisement />
+        {/* <HomeAdvertisement /> */}
       </ContentStyle>
     </Page>
   );

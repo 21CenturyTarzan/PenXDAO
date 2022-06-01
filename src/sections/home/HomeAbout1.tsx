@@ -91,7 +91,7 @@ export default function HomeHugePackElements() {
                   variant="overline"
                   sx={{ mb: 2, color: 'text.disabled' }}
                 >
-                  Pen-X Protocol
+                  How Pen-X Works
                 </Typography>
               </m.div>
 
@@ -109,7 +109,7 @@ export default function HomeHugePackElements() {
                     color: isLight ? 'text.secondary' : 'common.white',
                   }}
                 >
-                  Instead of locking your funds until retirement, Pen-X leaves investors in full control, incentivising retirement saving with a transparent Longevity Reward Scheme.
+                  Our protocol uses smart contracts that integrate with payroll systems, enabling workers and employers to contribute to retirement pots without jeopardizing privacy and security.
                 </Typography>
               </m.div>
 
@@ -122,7 +122,7 @@ export default function HomeHugePackElements() {
                   rel="noopener"
                   href="https://docs.penxdao.com/"
                 >
-                  Product Documentation
+                  Protocol Details
                 </Button>
               </m.div>
             </ContentStyle>

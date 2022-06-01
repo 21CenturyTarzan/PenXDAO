@@ -12,6 +12,8 @@ import {
 //
 import Iconify from './Iconify';
 
+// routes
+import { PATH_EXT } from '../routes/paths';
 // ----------------------------------------------------------------------
 
 export type SocialLinks = {
@@ -41,25 +43,25 @@ export default function SocialsButton({
       name: 'FaceBook',
       icon: 'eva:facebook-fill',
       socialColor: '#1877F2',
-      path: links.facebook || '#facebook-link',
+      path: PATH_EXT.facebook || '#facebook-link',
     },
     {
       name: 'Instagram',
       icon: 'ant-design:instagram-filled',
       socialColor: '#E02D69',
-      path: links.instagram || '#instagram-link',
+      path: PATH_EXT.instagram || '#instagram-link',
     },
     {
-      name: 'Linkedin',
+      name: 'Medium',
       icon: 'eva:linkedin-fill',
       socialColor: '#007EBB',
-      path: links.linkedin || '#linkedin-link',
+      path: PATH_EXT.medium || '#linkedin-link',
     },
     {
       name: 'Twitter',
       icon: 'eva:twitter-fill',
       socialColor: '#00AAEC',
-      path: links.twitter || '#twitter-link',
+      path: PATH_EXT.twitter || '#twitter-link',
     },
   ];
 

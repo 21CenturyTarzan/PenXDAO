@@ -98,11 +98,11 @@ export default function HomeMinimal() {
             mb: { xs: 10, md: 25 },
           }}
         >
-          <m.div variants={varFade().inUp}>
+          {/* <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
               The Pen-X Pension Fund
             </Typography>
-          </m.div>
+          </m.div> */}
           <m.div variants={varFade().inDown}>
             <Typography variant="h2">How can Pen-X help your organisation?</Typography>
           </m.div>

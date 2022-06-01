@@ -105,4 +105,17 @@ export const PATH_APP = {
   },
 };
 
+
+
+export const PATH_EXT = {
+  docs: 'https://docs.penxdao.com',
+  jobs: 'https://link.penxdao.com/job-board',
+  discord: 'https://link.penxdao.com/discord',
+  twitter: 'https://link.penxdao.com/discord',
+  linkedin: 'https://penxdao.com/',
+  instagram: 'https://penxdao.com/',
+  facebook: 'https://penxdao.com/',
+  medium: 'https://penxdao.medium.com/',
+};
+
 export const PATH_DOCS = 'https://docs.penxdao.com';

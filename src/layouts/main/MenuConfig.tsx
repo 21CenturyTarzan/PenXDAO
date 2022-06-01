@@ -1,5 +1,5 @@
 // routes
-import { PATH_AUTH, PATH_DOCS, PATH_PAGE } from '../../routes/paths';
+import { PATH_EXT, PATH_AUTH, PATH_DOCS, PATH_PAGE } from '../../routes/paths';
 // components
 import { PATH_AFTER_LOGIN } from '../../config';
 // components
@@ -69,9 +69,24 @@ const menuConfig = [
   //   ],
   // },
   {
+    title: 'Blog',
+    icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
+    path: PATH_EXT.medium,
+  },
+  {
+    title: 'Jobs',
+    icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
+    path: PATH_EXT.jobs,
+  },
+  {
+    title: 'Discord',
+    icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
+    path: PATH_EXT.discord,
+  },
+  {
     title: 'Documentation',
     icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
-    path: PATH_DOCS,
+    path: PATH_EXT.docs,
   },
 ];
 

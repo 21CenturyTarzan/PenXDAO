@@ -27,27 +27,8 @@ export default function MainLayout({ children }: Props) {
 
       <Box sx={{ flexGrow: 1 }} />
 
-      {!isHome ? (
-        <MainFooter />
-      ) : (
-        <Box
-          sx={{
-            py: 5,
-            textAlign: 'center',
-            position: 'relative',
-            bgcolor: 'background.default',
-          }}
-        >
-          <Container>
-            <Logo sx={{ mb: 1, mx: 'auto' }} />
-
-            <Typography variant="caption" component="p">
-              © All rights reserved
-              <br /> Made in Europe
-            </Typography>
-          </Container>
-        </Box>
-      )}
+      
+    <MainFooter />
     </Stack>
   );
 }

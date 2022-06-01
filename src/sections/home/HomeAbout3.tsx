@@ -61,19 +61,19 @@ export default function HomeAbout3() {
                   variant="overline"
                   sx={{ mb: 2, color: 'text.disabled' }}
                 >
-                  Set and forget
+                  Who controls Pen-X?
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography variant="h2" sx={{ mb: 3, color: 'common.white' }}>
-                  Simple exposure to complex strategies.
+                  Truly decentralised.
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white', mb: 5 }}>
-                Broad diversification across a groundbreaking variety of instruments and strategies. Lower risk profile than typical crypto assets for viable long-term investing. All through a simple DAO-managed, passive investment vehicle.
+                Pen-X is controlled by everyone involved: from our fund managers and engineers to the customers who invest their savings into our fund. While the governance of Pen-X is decentralized and transparent, the DAO holds defined structures and processes that allow it to operate efficiently and maintain the high standards required for a robust financial product.
                 </Typography>
               </m.div>
 
